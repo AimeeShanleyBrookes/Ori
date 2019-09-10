@@ -1,10 +1,10 @@
-package main
+package exchange
 
 import(
         "fmt" 
         "math"
       )
-func main() 
+func exchange() 
 {
 
   //declarations
@@ -21,13 +21,13 @@ func main()
   fmt.Println("Enter 1 if you want to convert euro to dollar")
   fmt.Println("Enter 2 if you want to convert euro to pounds")
 
-  fmt.Println("Enter your choice:")
+  fmt.Println("Enter your choice:",&choice)
 
-  scanf("%d", &choice)
+  //scanf("%d", &choice)
   get char()
   
-  fmt.Println("Enter the amount of euro:")
-  scanf("%f", &amount)
+  fmt.Println("Enter the amount of euro:",&amount)
+  //scanf("%f", &amount)
   
   if (choice ==1)
     {
