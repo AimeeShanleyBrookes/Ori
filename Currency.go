@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-func Calculate(x float64) (result float64) {
-	result = x * 1.1
+func Calculate(euro float64) (result float64) {
+	result = euro * 1.1
 	return result
 }
 
