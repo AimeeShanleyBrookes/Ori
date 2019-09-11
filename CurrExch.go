@@ -1,48 +1,36 @@
-package exchange
+package main
 
-import(
-        "fmt" 
-        "math"
-      )
-func exchange() 
-{
+import (
+	"fmt"
+)
 
-  //declarations
-  //stores options
+const eurotodollars = 1.1
+const eurotopounds = 0.89
 
-  var options, amount, euro, dollar, euro2, gbd2, dtotal, ptotal int
-  var ans, choice int
+func main() {
 
-  //core program
+	var choice int
+	var euro float64
 
-  //welcome
+	fmt.Println("Welcome")
+	fmt.Println("Enter 1 for euro to dollars")
+	fmt.Println("Enter 2 for euro to pounds")
 
-  fmt.Println("Welcome to the currency exchange program")
-  fmt.Println("Enter 1 if you want to convert euro to dollar")
-  fmt.Println("Enter 2 if you want to convert euro to pounds")
+	fmt.Println("Enter choice:")
+	fmt.Scanf("%d", &choice)
 
-  fmt.Println("Enter your choice:",&choice)
+	fmt.Println("Enter the amount of euro:")
+	fmt.Scanf("%f", &euro)
 
-  //scanf("%d", &choice)
-  get char()
-  
-  fmt.Println("Enter the amount of euro:",&amount)
-  //scanf("%f", &amount)
-  
-  if (choice ==1)
-    {
-      get char()
-  
-      fmt.Println("%.1f euro(s)is equivalent to %.2f dollar(s)", amount, amount*0.693)
-    }
-  getchar()
-  
-  for(amount=1; amount<=10;amount++)
-    {
-      fmt.Println("%.1f euro(s) is equivalent to %.2f gbp and %.2f usd\n", amount, amount*1.293")
-  
-      fmt.Println("Goodbye\n")
-    }
-  }
-  
-  
+	if choice == 1 {
+		dollars := euro * eurotodollars
+		fmt.Println("dollars", dollars)
+	} else if choice == 2 {
+		pound := euro * eurotopounds
+		fmt.Println("pounds", pound)
+	} else {
+		fmt.Println("Error")
+	}
+
+	fmt.Println("Goodbye")
+}
