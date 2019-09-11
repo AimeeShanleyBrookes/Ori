@@ -20,22 +20,22 @@ func main() {
 
 		fmt.Println("Enter choice:")
 		fmt.Scanf("%d", &choice)
-		
-		
+
+		if choice == 3 {
+			fmt.Println("Goodbye")
+			break;
+		}
+	
 		fmt.Println("Enter the amount of euro:")
 		fmt.Scanf("%f", &euro)
 
+		
 		if choice == 1 {
 			dollars := euro * eurotodollars
 			fmt.Println("dollars", dollars)
 		} else if choice == 2 {
 			pound := euro * eurotopounds
 			fmt.Println("pounds", pound)
-		} else {
-			fmt.Println("Goodbye")
-			break;
-			
-		
-	}
+		} 
 }
 }
