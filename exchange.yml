@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: sample-deployment
+labels:
+app:currency exchange
+template:
+metadata:
+labels:
+app: currency exchange 
+spec:
+containers:
+-name: sample
+-image: sample:v1
+ports:
+-containerPort:...
+environment:
+CONFIF_SERVER.https://....
